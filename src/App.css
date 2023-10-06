@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  align-content: flex-start;
+}
+.dataCard {
+  width: 700px;
+  height: 400px;
+}
+.forecast-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  gap: 130px;
+}
+@media screen and (max-width: 1200px) {
+  .forecast-section {
+    flex-direction: column;
+  }
+}

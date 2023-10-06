@@ -1,0 +1,16 @@
+.header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #545454;
+  width: 1366px;
+  height: 80px;
+  color: #fff;
+  font-family: Verdana;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

@@ -1,0 +1,41 @@
+.not-found {
+  width: 1150px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+p {
+  color: #545454;
+  font-family: Verdana;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.not-selected-header {
+  text-align: center;
+  color: #545454;
+  font-family: Verdana;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.not-selected-paragraph {
+  color: #545454;
+  font-family: Verdana;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.not-selected-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
