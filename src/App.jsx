@@ -38,17 +38,17 @@ export const App = () => {
           <LoadingSpinner />
         ) : data ? (
           <>
-            <DetailCard
-              className="detail-card"
-              data={data}
-              selectedDate={selectedDate || data?.data?.[0]}
-            />
             <Table
               city={debouncedValue}
               isCityExact={isCityExact}
               data={data}
               selectedDate={selectedDate}
               setSelectedDate={setSelectedDate}
+            />
+            <DetailCard
+              className="detail-card"
+              data={data}
+              selectedDate={selectedDate || data?.data?.[0]}
             />
           </>
         ) : (

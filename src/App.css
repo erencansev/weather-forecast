@@ -6,10 +6,10 @@
 body {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
   margin: 0;
   align-content: flex-start;
 }
+
 .dataCard {
   width: 700px;
   height: 400px;
@@ -23,6 +23,30 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .forecast-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .dataCard {
+    width: 600px;
+    height: 300px;
+  }
+  .forecast-section {
+    margin-top: 50px;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .forecast-section {
+    flex-direction: column-reverse;
+  }
+  .dataCard {
+    width: 360px;
+    height: 300px;
+  }
+  .forecast-section {
+    margin-top: 50px;
+    gap: 30px;
+  }
+  input {
+    width: 300px;
   }
 }

@@ -13,11 +13,12 @@ export function DetailCard({ data, selectedDate }) {
   return (
     <>
       <div className={styles["detail-card"]}>
-        <h1 className="detail-temp">{selectedDate?.max_temp}°C</h1>
+        <div className={styles["card-info"]}>
+          <h1 className="detail-temp">{selectedDate?.max_temp}°C</h1>
 
-        <h3>{data?.city_name}</h3>
-        <p>{text}</p>
-
+          <h3>{data?.city_name}</h3>
+          <p>{text}</p>
+        </div>
         <div className={styles["detail-icon"]}>
           <img
             src={`https://www.weatherbit.io/static/img/icons/${weatherIcon}.png`}
