@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  align-content: flex-start;
+
+#root {
+  width: 100%;
+}
+.app {
+  width: 100%;
 }
 
 .dataCard {
