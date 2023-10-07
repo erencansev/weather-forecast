@@ -34,3 +34,14 @@ p {
   font-weight: 400;
   line-height: normal;
 }
+.detail-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+}
+.detail-icon img {
+  width: 32px;
+  height: 32px;
+}

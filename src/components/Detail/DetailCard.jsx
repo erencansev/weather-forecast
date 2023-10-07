@@ -7,6 +7,9 @@ export function DetailCard({ data, selectedDate }) {
   const month = date.getMonth();
   const text = `${day} ${monthNames[month]}`;
 
+  const weatherIcon = selectedDate?.weather?.icon;
+  const weatherDescription = selectedDate?.weather?.description;
+
   return (
     <>
       <div className={styles["detail-card"]}>
@@ -14,7 +17,14 @@ export function DetailCard({ data, selectedDate }) {
 
         <h3>{data?.city_name}</h3>
         <p>{text}</p>
-        <div className="weather-icon">{selectedDate?.weather?.description}</div>
+
+        <div className={styles["detail-icon"]}>
+          <img
+            src={`https://www.weatherbit.io/static/img/icons/${weatherIcon}.png`}
+            alt="Weather ıcon"
+          />
+          <p>{weatherDescription}</p>
+        </div>
       </div>
     </>
   );
