@@ -50,4 +50,8 @@ input:focus {
   right: 10px;
   transform: translateY(-50%);
   padding: 14px 26px;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
