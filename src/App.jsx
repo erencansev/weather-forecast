@@ -18,10 +18,10 @@ export const App = () => {
   const { data, isCityExact, fetchData, isLoading } =
     useWeatherData(debouncedValue);
   const [selectedDate, setSelectedDate] = useState();
-  console.log(data);
 
   useEffect(() => {
     fetchData(city);
+    setSelectedDate(null);
   }, [city]);
 
   return (
