@@ -17,18 +17,8 @@
 
 @media screen and (max-width: 650px) {
   .header {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #545454;
-    height: 80px;
-    color: #fff;
-    font-family: Verdana;
     font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
   }
 }

@@ -17,7 +17,7 @@
   flex-direction: column;
   gap: 20px;
 }
-h1 {
+.detail-temp {
   color: #77b6ea;
   font-family: Verdana;
   font-size: 40px;
@@ -33,7 +33,7 @@ h3 {
   font-weight: 400;
   line-height: normal;
 }
-p {
+.weather-description {
   color: #545454;
   font-family: Verdana;
   font-size: 14px;
@@ -67,7 +67,7 @@ p {
     width: 70px;
     height: 70px;
   }
-  h1 {
+  .detail-temp {
     font-size: 32px;
   }
   h3 {

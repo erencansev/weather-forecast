@@ -1,4 +1,4 @@
-import { Line } from "react-chartjs-2";
+import { Line, getElementAtEvent } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 import { monthNames } from "../../constants";
 
@@ -7,7 +7,7 @@ function TableContent({ data, setSelectedDate, setSelectedIndex }) {
     <Line
       data={{
         labels: data?.data?.slice(0, 8).map((item) => {
-          const date = new Date(item.valid_date);
+          const date = new Date(item?.valid_date);
           const day = date.getDate();
           const month = date.getMonth();
           return `${day} ${monthNames[month]}`;
@@ -15,7 +15,7 @@ function TableContent({ data, setSelectedDate, setSelectedIndex }) {
         datasets: [
           {
             label: "Min",
-            data: data?.data?.slice(0, 8).map((item) => item.min_temp),
+            data: data?.data?.slice(0, 8).map((item) => item?.min_temp),
             backgroundColor: "#6b6b6b",
             borderColor: "#6b6b6b",
             borderWidth: 4,
@@ -26,7 +26,7 @@ function TableContent({ data, setSelectedDate, setSelectedIndex }) {
           },
           {
             label: "Max",
-            data: data?.data?.slice(0, 8).map((item) => item.max_temp),
+            data: data?.data?.slice(0, 8).map((item) => item?.max_temp),
             backgroundColor: "#8bc0ec",
             borderColor: "#8bc0ec",
             borderWidth: 4,
@@ -69,7 +69,22 @@ function TableContent({ data, setSelectedDate, setSelectedIndex }) {
 
         onClick: (e, el) => {
           if (el.length > 0) {
-            setSelectedDate(data?.data[el[0].index]);
+            const dataIndex = el[0].index;
+            const datasetIndex = el[0].datasetIndex;
+
+            if (datasetIndex === 0) {
+              // User clicked the "Min" dataset
+              setSelectedDate({
+                ...data?.data[dataIndex],
+                temp: data?.data[dataIndex]?.min_temp,
+              });
+            } else if (datasetIndex === 1) {
+              // User clicked the "Max" dataset
+              setSelectedDate({
+                ...data?.data[dataIndex],
+                temp: data?.data[dataIndex]?.max_temp,
+              });
+            }
           }
         },
       }}
