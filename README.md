@@ -4,9 +4,22 @@ This project includes a weather forecast application that pulls weather data fro
 
 ### Requirements ⚙️
 
+---
+
 To run the project, you will need the following software and tools:
 
 - [Node.js](https://nodejs.org/) (comes with npm)
+
+### Technologies Used ⛓️
+
+---
+
+This project makes use of the following technologies:
+
+- React.js
+- Chart.js
+- PureCSS
+- Weatherbit API
 
 ## Installation 🔨
 
